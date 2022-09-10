@@ -1,16 +1,16 @@
 import cv2
 import os
 
-dataPath = "C:/Users/User/Documents/AppWeb/facial-recognition-py/data"
+dataPath = "./data"
 imagePaths = os.listdir(dataPath)
 print("imagePaths", imagePaths)
 
 face_recognizer = cv2.face.EigenFaceRecognizer_create()
 
 # Leyendo el modelo
-face_recognizer.read("C:/Users/User/Documents/AppWeb/facial-recognition-py/model/model-eigen-face.xml")
+face_recognizer.read("./model/model-eigen-face.xml")
 
-cap = cv2.VideoCapture("C:/Users/User/Documents/AppWeb/facial-recognition-py/videos/facial-recognition.mp4")
+cap = cv2.VideoCapture("./videos/facial-recognition.mp4")
 
 faceClassif = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
